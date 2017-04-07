@@ -1591,7 +1591,8 @@ inline ostring Connection::GetService() const
 
 inline ostring Connection::GetServer() const
 {
-    return Check(OCI_GetServerName(*this));
+    const otext * txt = OCI_GetServerName(*this);
+    return Check((txt ? txt : ""));
 }
 
 inline ostring Connection::GetDomain() const
