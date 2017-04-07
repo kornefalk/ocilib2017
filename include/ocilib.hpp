@@ -35,6 +35,8 @@
 #include <list>
 #include <vector>
 #include <iterator>
+#include <cstddef>
+
 
 extern "C"{
 #include "ocilib.h"
@@ -4938,8 +4940,8 @@ public:
 	typedef Collection<value_type> CollectionType;
 
 	typedef std::random_access_iterator_tag iterator_category;
-	typedef std::ptrdiff_t difference_type;
-	typedef std::ptrdiff_t distance_type;
+	typedef ptrdiff_t difference_type;
+	typedef ptrdiff_t distance_type;
 	typedef value_type* pointer;
 	typedef value_type& reference;
 
